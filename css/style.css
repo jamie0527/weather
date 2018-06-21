@@ -27,10 +27,88 @@ html{
 }
 
 body{
-  font-size: 1.6rem;
+   font-size: 1.6rem;
+   background-color: #7AC7AA;
+   font-family: "HyundaiRegular";
+   /*
+  background-color: #71C0AD;
+  background-image: linear-gradient(to bottom,red,green);
+  background-repeat: no-repeat;
+  background-position: 100px 50px; 
+  아래의 형태로 줄여서 쓸수 있다*/
+
+  /* background: #71C0AD linear-gradient(to top,blue,green) no-repeat 100px 50px; */
 }
 
 h1, h2, h3, h4, h5, h6{
   font-size: 1em;
   font-weight: normal;
+}
+
+/* 섹션 1 콘텐츠 레이아웃 */
+
+.section1{
+  background-color: #7AC7A;
+  display: grid;
+  grid-template-columns: repeat(12,65px);
+  grid-template-rows: auto auto;
+  position: relative;
+  justify-content: center;
+  grid-column-gap: 20px; 
+  /* grid-template-areas: "section1-image-wrapper    section1-logo"
+                       "section1-image-wrapper    section1-description" */
+
+}
+
+/* .section1::after{
+  content: "";
+  background: repeating-linear-gradient(to right, hsla(0,50%,50%,.5), hsla(0,50%,50%,.5), 65px,transparent 65px, transparent 85px);
+  position: absolute;
+  top: 0;
+  column: 0;
+  width: 1000px;
+  height: 100vh;
+} */
+
+/* 로고 */
+.logo{
+  /* background: yellow; */
+  font-size: 8rem;
+  color: #ffffff;
+  font-family: "HyundaiExtraBold";
+  /* grid-area: section1-logo; */
+  grid-column: 4/ span 6;
+  grid-row: 1/2;
+
+}
+
+/* 웨더 앱 소개 */
+.description{
+  
+  color: #ffffff;
+  font-size: 3rem;
+  line-height: 1.5;
+  /* grid-area: section1-description; */
+  grid-column: 7/ span 6;
+  grid-row: 2/3;
+
+}
+
+.description span{
+  display: block;
+}
+
+/* 앱소개 이미지 */
+.image-wrapper{
+ 
+  /* grid-area: section1-image-wrapper; */
+  grid-column: 1/ span 4;
+  grid-row: 2/3;
+
+}
+
+.image-wrapper img{
+
+   max-width: 100%;
+  height: auto;
 }
