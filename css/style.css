@@ -2,7 +2,35 @@
 @import url("font.css");
 @import url("normalize.css");
 
-/* box-sizing 기본 값 선언 */
-*, *::before, *::after{
-  box-sizing: border-box;
+/* h1{
+  background-color: yellow;
+  border: 10px solid black;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+p{
+  background-color: pink;
+  border: 5px dotted red;
+  padding: 20px 50px;
+  margin-top: 50px;
+} */
+
+/* 스타일 초기화 */
+html, body, h1, h2, h3, h4, h5, h6, p{
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-size: 1em;
+  font-weight: normal;
 }
